@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Experience — LUXEGENIE</title>
+    <meta name="description"
+        content="Explore the LUXEGENIE restaurant and hospitality solution. Experience seamless table-side intelligence designed for fine-dining environments.">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body class="restaurant-page">
+
+    <!-- Page Transition Overlay -->
+    <div id="transition-overlay" class="transition-overlay-container"></div>
+
+    <!-- Glassmorphic Header -->
+    <header class="luxury-header">
+        <div class="luxury-header-inner">
+            <div class="header-left">
+                <button class="header-menu-btn" aria-label="Toggle Menu">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </button>
+            </div>
+            <div class="header-center">
+                <a href="index.html" style="display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/images/woobly.png" alt="Woobly Logo" class="header-logo-img">
+                </a>
+            </div>
+            <div class="header-right">
+                <a href="story.html" class="header-contact-btn">BRAND STORY</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div id="menu-overlay" class="menu-overlay">
+        <div class="menu-overlay-top">
+            <nav class="menu-nav">
+                <a href="index.html#home" class="menu-link">HOME</a>
+                <a href="story.html" class="menu-link">BRAND STORY</a>
+                <a href="index.html#specifications" class="menu-link">PRODUCT SPECIFICATIONS</a>
+                <a href="office.html" class="menu-link">OFFICE</a>
+                <a href="restaurant.html" class="menu-link">RESTAURANTS</a>
+                <a href="index.html#contact" class="menu-link">CONTACT US</a>
+                <div class="menu-socials">
+                    <a href="https://www.instagram.com/mywoobly/" target="_blank" class="menu-social-link">INSTAGRAM ↗</a>
+                    <a href="https://www.linkedin.com/company/woobly/?originalSubdomain=in" target="_blank" class="menu-social-link">LINKEDIN ↗</a>
+                </div>
+            </nav>
+        </div>
+        <div class="menu-overlay-bottom">
+            <img src="assets/images/21.png" alt="Featured Space" class="menu-featured-img">
+        </div>
+    </div>
+
+    <!-- Pinned Scroll Canvas Section -->
+    <div id="restaurant-scroll-container">
+        <div class="office-hero-pin">
+            <canvas id="restaurant-canvas" class="visible"></canvas>
+
+            <div class="hero-bottom-gradient"></div>
+        </div>
+    </div>
+
+    <!-- More Than a Lamp Features Section -->
+    <section class="office-features-section">
+        <div class="office-features-inner">
+            <h2 class="features-main-title">More than a lamp</h2>
+            <p class="features-main-desc">The LUXEGENIE smart lamp is engineered to elevate the modern dining experience. By integrating table-side service paging, ambient candlelight intelligence, and custom-tuned lighting scenes, it empowers luxury hospitality venues to offer unmatched guest care and a highly personalized dining atmosphere.</p>
+            
+            <div class="features-grid-three-col">
+                <div class="feature-card-col">
+                    <div class="feature-icon-box">
+                        <svg class="feature-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="26" stroke="var(--accent-color)" stroke-width="1.2" stroke-opacity="0.3" stroke-dasharray="3 3" />
+                            <path d="M32 14C32 23.9 23.9 32 14 32C23.9 32 32 40.1 32 50C32 40.1 40.1 32 50 32C40.1 32 32 23.9 32 14Z" stroke="var(--accent-color)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="32" cy="32" r="5" fill="var(--accent-color)" opacity="0.8" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title">Discreet Interaction</h3>
+                    <p class="feature-card-desc">Discreetly connect guests with corporate hospitality, summon servers, request the bill, or select sommelier recommendations without interrupting the meal's rhythm.</p>
+                </div>
+                
+                <div class="feature-card-col">
+                    <div class="feature-icon-box">
+                        <svg class="feature-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="22" stroke="var(--accent-color)" stroke-width="1" stroke-opacity="0.25" />
+                            <circle cx="32" cy="32" r="14" stroke="var(--accent-color)" stroke-width="1.5" />
+                            <line x1="32" y1="5" x2="32" y2="9" stroke="var(--accent-color)" stroke-width="2.2" stroke-linecap="round" />
+                            <line x1="32" y1="55" x2="32" y2="59" stroke="var(--accent-color)" stroke-width="2.2" stroke-linecap="round" />
+                            <line x1="5" y1="32" x2="9" y2="32" stroke="var(--accent-color)" stroke-width="2.2" stroke-linecap="round" />
+                            <line x1="55" y1="32" x2="59" y2="32" stroke="var(--accent-color)" stroke-width="2.2" stroke-linecap="round" />
+                            <line x1="13" y1="13" x2="17" y2="17" stroke="var(--accent-color)" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="47" y1="47" x2="51" y2="51" stroke="var(--accent-color)" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="13" y1="51" x2="17" y2="47" stroke="var(--accent-color)" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="47" y1="17" x2="51" y2="13" stroke="var(--accent-color)" stroke-width="1.5" stroke-linecap="round" />
+                            <circle cx="32" cy="32" r="4.5" fill="var(--accent-color)" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title">Atmospheric Intelligence</h3>
+                    <p class="feature-card-desc">Dynamically coordinates warm, glare-free light levels matching course transitions, time of day, and ambient noise to maintain absolute intimacy.</p>
+                </div>
+                
+                <div class="feature-card-col">
+                    <div class="feature-icon-box">
+                        <svg class="feature-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="25" stroke="var(--accent-color)" stroke-width="1.2" />
+                            <path d="M32 7V12" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M57 32H52" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M32 57V52" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M7 32H12" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="32" y1="32" x2="49" y2="20" stroke="var(--accent-color)" stroke-width="2.2" stroke-linecap="round" />
+                            <circle cx="32" cy="32" r="5.5" fill="var(--accent-color)" stroke="#000000" stroke-width="1.5" />
+                            <circle cx="49" cy="20" r="3" fill="var(--accent-color)" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title">Effortless Coordination</h3>
+                    <p class="feature-card-desc">An intuitive glass touch interface built for seamless guest convenience, allowing instant staff calling without visible indicators or disruption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Interactive Specifications Section -->
+    <section class="office-specs-section">
+        <div class="office-specs-inner">
+            <div class="specs-grid">
+                
+                <!-- Left Column (Feature Details 1-3) -->
+                <div class="specs-col specs-left-col">
+                    
+                    <!-- Item 1: Premium Metallic Finish -->
+                    <div class="spec-item spec-top-left" data-target="top-left">
+                        <div class="spec-text-wrapper">
+                            <h4 class="spec-title">Premium Metallic Finish</h4>
+                            <p class="spec-desc">Exquisite metallic finishes that elevate board layouts, matching fine linens, luxury silverware, and high-end restaurant branding.</p>
+                        </div>
+                        <div class="spec-icon-wrapper">
+                            <svg class="spec-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="32" r="28" stroke="var(--accent-color)" stroke-width="1.2" />
+                                <circle cx="28" cy="28" r="9" stroke="var(--accent-color)" stroke-width="1.2" />
+                                <path d="M41 37C43 37 44.5 35.5 44.5 33.5C44.5 31.5 42.5 28 41 28C39.5 28 37.5 31.5 37.5 33.5C37.5 35.5 39 37 41 37Z" fill="var(--accent-color)" fill-opacity="0.5"/>
+                                <path d="M48 18L49 21L52 22L49 23L48 26L47 23L44 22L47 21L48 18Z" fill="var(--accent-color)"/>
+                            </svg>
+                        </div>
+                        <div class="spec-line-wrapper">
+                            <svg class="spec-line-svg" viewBox="0 0 130 50" fill="none">
+                                <path class="spec-line-path" d="M0 10H40L90 40H130" stroke="var(--accent-color)" stroke-width="1" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2: Integrated Ambient Lighting -->
+                    <div class="spec-item spec-mid-left" data-target="mid-left">
+                        <div class="spec-text-wrapper">
+                            <h4 class="spec-title">Integrated Ambient Lighting</h4>
+                            <p class="spec-desc">Soft candlelight-like illumination tuned to highlight gastronomic presentations while avoiding reflection on crystal glasses and eyes.</p>
+                        </div>
+                        <div class="spec-icon-wrapper">
+                            <svg class="spec-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="32" r="28" stroke="var(--accent-color)" stroke-width="1.2" />
+                                <polygon points="32,15 47,23.5 47,40.5 32,49 17,40.5 17,23.5" stroke="var(--accent-color)" stroke-width="1.2" />
+                                <polygon points="32,20 42,26 42,38 32,44 22,38 22,26" stroke="var(--accent-color)" stroke-width="1" stroke-dasharray="2 2" />
+                                <circle cx="32" cy="32" r="4" fill="var(--accent-color)" />
+                            </svg>
+                        </div>
+                        <div class="spec-line-wrapper">
+                            <svg class="spec-line-svg" viewBox="0 0 130 20" fill="none">
+                                <path class="spec-line-path" d="M0 10H130" stroke="var(--accent-color)" stroke-width="1" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3: Intuitive Top Interface -->
+                    <div class="spec-item spec-bottom-left" data-target="bottom-left">
+                        <div class="spec-text-wrapper">
+                            <h4 class="spec-title">Intuitive Top Interface</h4>
+                            <p class="spec-desc">Water-resistant, easy-to-sanitize tempered glass top interface built for heavy restaurant operations and fluid user adjustments.</p>
+                        </div>
+                        <div class="spec-icon-wrapper">
+                            <svg class="spec-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="32" r="28" stroke="var(--accent-color)" stroke-width="1.2" />
+                                <circle cx="32" cy="32" r="9" stroke="var(--accent-color)" stroke-width="1.5" />
+                                <line x1="32" y1="12" x2="32" y2="16" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="32" y1="48" x2="32" y2="52" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="12" y1="32" x2="16" y2="32" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="48" y1="32" x2="52" y2="32" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="18" y1="18" x2="21" y2="21" stroke="var(--accent-color)" stroke-width="1.5"/>
+                                <line x1="43" y1="43" x2="46" y2="46" stroke="var(--accent-color)" stroke-width="1.5"/>
+                                <line x1="18" y1="43" x2="21" y2="40" stroke="var(--accent-color)" stroke-width="1.5"/>
+                                <line x1="43" y1="21" x2="46" y2="18" stroke="var(--accent-color)" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <div class="spec-line-wrapper">
+                            <svg class="spec-line-svg" viewBox="0 0 130 50" fill="none">
+                                <path class="spec-line-path" d="M0 40H40L90 10H130" stroke="var(--accent-color)" stroke-width="1" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Center Column (Product Image) -->
+                <div class="specs-col specs-center-col">
+                    <div class="specs-product-img-container">
+                        <img src="assets/images/4.png" alt="LUXEGENIE Product Specifications" class="specs-product-img">
+                        <!-- Highlight glow dots -->
+                        <div class="spec-glow-dot glow-top-left" style="top: 29%; left: 32%;"></div>
+                        <div class="spec-glow-dot glow-mid-left" style="top: 48%; left: 24%;"></div>
+                        <div class="spec-glow-dot glow-bottom-left" style="top: 67%; left: 30%;"></div>
+                        <div class="spec-glow-dot glow-top-right" style="top: 29%; left: 68%;"></div>
+                        <div class="spec-glow-dot glow-mid-right" style="top: 48%; left: 76%;"></div>
+                        <div class="spec-glow-dot glow-bottom-right" style="top: 67%; left: 70%;"></div>
+                    </div>
+                </div>
+                
+                <!-- Right Column (Feature Details 4-6) -->
+                <div class="specs-col specs-right-col">
+                    
+                    <!-- Item 4: Smart Service Connectivity -->
+                    <div class="spec-item spec-top-right" data-target="top-right">
+                        <div class="spec-icon-wrapper">
+                            <svg class="spec-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="32" r="28" stroke="var(--accent-color)" stroke-width="1.2" />
+                                <circle cx="32" cy="32" r="7" stroke="var(--accent-color)" stroke-width="1.5" />
+                                <circle cx="32" cy="15" r="3" fill="var(--accent-color)"/>
+                                <circle cx="49" cy="32" r="3" fill="var(--accent-color)"/>
+                                <circle cx="32" cy="49" r="3" fill="var(--accent-color)"/>
+                                <circle cx="15" cy="32" r="3" fill="var(--accent-color)"/>
+                                <line x1="32" y1="18" x2="32" y2="25" stroke="var(--accent-color)" stroke-width="1" stroke-dasharray="2 2" />
+                                <line x1="46" y1="32" x2="39" y2="32" stroke="var(--accent-color)" stroke-width="1" stroke-dasharray="2 2" />
+                                <line x1="32" y1="46" x2="32" y2="39" stroke="var(--accent-color)" stroke-width="1" stroke-dasharray="2 2" />
+                                <line x1="18" y1="32" x2="25" y2="32" stroke="var(--accent-color)" stroke-width="1" stroke-dasharray="2 2" />
+                            </svg>
+                        </div>
+                        <div class="spec-text-wrapper">
+                            <h4 class="spec-title">Smart Service Connectivity</h4>
+                            <p class="spec-desc">One-tap silent pagers that directly notify butler stations, floor managers, or wine cellars, preserving guest privacy.</p>
+                        </div>
+                        <div class="spec-line-wrapper">
+                            <svg class="spec-line-svg" viewBox="0 0 130 50" fill="none">
+                                <path class="spec-line-path" d="M130 10H90L40 40H0" stroke="var(--accent-color)" stroke-width="1" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 5: Compact & Elegant Form -->
+                    <div class="spec-item spec-mid-right" data-target="mid-right">
+                        <div class="spec-icon-wrapper">
+                            <svg class="spec-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="32" r="28" stroke="var(--accent-color)" stroke-width="1.2" />
+                                <path d="M19 19L27 27M27 27H22M27 27V22" stroke="var(--accent-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M45 19L37 27M37 27H42M37 27V22" stroke="var(--accent-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19 45L27 37M27 37H22M27 37V42" stroke="var(--accent-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M45 45L37 37M37 37H42M37 37V42" stroke="var(--accent-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="spec-text-wrapper">
+                            <h4 class="spec-title">Compact & Elegant Form</h4>
+                            <p class="spec-desc">An elegant, small footprint base that leaves table layouts open for dishes, pairings, and centerpiece designs.</p>
+                        </div>
+                        <div class="spec-line-wrapper">
+                            <svg class="spec-line-svg" viewBox="0 0 130 20" fill="none">
+                                <path class="spec-line-path" d="M130 10H0" stroke="var(--accent-color)" stroke-width="1" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 6: Customizable Experience -->
+                    <div class="spec-item spec-bottom-right" data-target="bottom-right">
+                        <div class="spec-icon-wrapper">
+                            <svg class="spec-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="32" r="28" stroke="var(--accent-color)" stroke-width="1.2" />
+                                <line x1="20" y1="18" x2="20" y2="46" stroke="var(--accent-color)" stroke-width="1.5" stroke-linecap="round"/>
+                                <line x1="32" y1="18" x2="32" y2="46" stroke="var(--accent-color)" stroke-width="1.5" stroke-linecap="round"/>
+                                <line x1="44" y1="18" x2="44" y2="46" stroke="var(--accent-color)" stroke-width="1.5" stroke-linecap="round"/>
+                                <circle cx="20" cy="36" r="3" fill="var(--accent-color)"/>
+                                <circle cx="32" cy="26" r="3" fill="var(--accent-color)"/>
+                                <circle cx="44" cy="38" r="3" fill="var(--accent-color)"/>
+                            </svg>
+                        </div>
+                        <div class="spec-text-wrapper">
+                            <h4 class="spec-title">Customizable Experience</h4>
+                            <p class="spec-desc">Saves tailored room illumination states for romantic dinners, power lunches, business banquets, or exclusive tastings.</p>
+                        </div>
+                        <div class="spec-line-wrapper">
+                            <svg class="spec-line-svg" viewBox="0 0 130 50" fill="none">
+                                <path class="spec-line-path" d="M130 40H90L40 10H0" stroke="var(--accent-color)" stroke-width="1" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Spaces Section -->
+    <section class="office-spaces-section">
+        <div class="office-spaces-inner">
+            <h2 class="spaces-main-title">Executive Spaces</h2>
+            <p class="spaces-main-desc">Distinctive configurations designed to harmonize with diverse dining environments, guest counts, and table contexts.</p>
+            
+            <div class="spaces-carousel-wrapper">
+                <div class="spaces-carousel">
+                    <!-- Slide 1: Commons -->
+                    <div class="space-card" data-index="0">
+                        <div class="space-card-img-wrapper">
+                            <img src="assets/restro/r.png" alt="Commons" class="space-card-img">
+                        </div>
+                        <div class="space-card-overlay">
+                            <h3 class="space-card-title">Commons</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 2: Alfresco -->
+                    <div class="space-card" data-index="1">
+                        <div class="space-card-img-wrapper">
+                            <img src="assets/restro/s.png" alt="Alfresco" class="space-card-img">
+                        </div>
+                        <div class="space-card-overlay">
+                            <h3 class="space-card-title">Alfresco</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 3: Dining -->
+                    <div class="space-card" data-index="2">
+                        <div class="space-card-img-wrapper">
+                            <img src="assets/restro/t.png" alt="Dining" class="space-card-img">
+                        </div>
+                        <div class="space-card-overlay">
+                            <h3 class="space-card-title">Dining</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <button class="carousel-nav-btn prev-btn" aria-label="Previous Slide">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-nav-btn next-btn" aria-label="Next Slide">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Navigation Dots -->
+            <div class="spaces-carousel-dots">
+                <span class="carousel-dot active" data-index="0"></span>
+                <span class="carousel-dot" data-index="1"></span>
+                <span class="carousel-dot" data-index="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Footer -->
+    <footer class="luxury-footer">
+        <div class="luxury-footer-inner">
+            <!-- Left: product image -->
+            <div class="luxury-footer-img-col">
+                <img src="assets/images/555.png" alt="LUXEGENIE Product" class="luxury-footer-img">
+            </div>
+            <!-- Right: link grid -->
+            <div class="luxury-footer-links-col">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3 class="footer-col-title">Contact</h3>
+                        <div class="footer-links">
+                            <div class="footer-link-group">
+                                <span class="footer-link-label">Email</span>
+                                <a href="mailto:hello@luxegenie.com" class="footer-link-val">hello@luxegenie.com</a>
+                            </div>
+                            <div class="footer-link-group">
+                                <span class="footer-link-label">Phone</span>
+                                <a href="tel:+919876543210" class="footer-link-val">+91 98765 43210</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3 class="footer-col-title">Company</h3>
+                        <div class="footer-links">
+                            <a href="story.html" class="footer-link-val">Brand Story</a>
+                            <a href="office.html" class="footer-link-val">Office</a>
+                            <a href="#" class="footer-link-val">Services</a>
+                            <a href="#" class="footer-link-val">Product</a>
+                            <a href="#" class="footer-link-val">Contact</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3 class="footer-col-title">Resources</h3>
+                        <div class="footer-links">
+                            <a href="#" class="footer-link-val">Privacy Policy</a>
+                            <a href="#" class="footer-link-val">Terms of Service</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3 class="footer-col-title">Experience</h3>
+                        <div class="footer-links">
+                            <a href="office.html" class="footer-link-val">Office</a>
+                            <a href="restaurant.html" class="footer-link-val">Restaurant</a>
+                            <a href="#" class="footer-link-val">Table-Side Intelligence</a>
+                            <a href="#" class="footer-link-val">Personalized Service</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-divider-container">
+                    <div class="footer-divider-line"></div>
+                    <img src="assets/images/White Gold (Monogram).png" alt="LUXEGENIE Monogram" class="footer-divider-monogram">
+                    <div class="footer-divider-line"></div>
+                </div>
+                <div class="footer-bottom">
+                    <span class="footer-copy">© 2026 LUXEGENIE. All rights reserved.</span>
+                    <div class="footer-bottom-links">
+                        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                        <span class="footer-bottom-separator">|</span>
+                        <a href="#" class="footer-bottom-link">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CDN Libraries (GSAP & ScrollTrigger) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Application Script for Restaurant scroll behavior -->
+    <script src="scripts/restaurant.js" defer></script>
+</body>
+
+</html>
