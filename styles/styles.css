@@ -85,7 +85,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     gap: 40px; /* Pushed more down below the video frame */
     background-color: #000000;
-    padding: 30px;
+    padding: 0px;
     box-sizing: border-box;
     opacity: 0;
     visibility: hidden;
@@ -100,10 +100,10 @@ body::-webkit-scrollbar {
 
 .render-video-wrapper {
     position: relative;
-    width: 80%; /* Takes up 80% of horizontal space */
-    max-width: 1400px; /* Increased to allow wider desktop viewports */
-    max-height: 65vh; /* Safety limit to fit screen heights */
-    aspect-ratio: 16 / 9;
+    width: 100%; /* Takes up 80% of horizontal space */
+    max-width: 100%; /* Increased to allow wider desktop viewports */
+    max-height: auto; /* Safety limit to fit screen heights */
+    /*aspect-ratio: 16 / 9;*/
     height: auto;
     border-radius: 12px;
     overflow: hidden;
@@ -1570,7 +1570,7 @@ body.loaded .skip-indicator-wrapper {
 @media (max-width: 768px) {
     .footer-overlay-container {
         padding: 60px 0 40px 0;
-        height: 100vh;
+        height: auto;
         overflow-y: auto;
         justify-content: flex-start;
     }
@@ -2223,12 +2223,12 @@ body.menu-open .header-menu-btn.active .menu-line {
 
     /* Mobile Collage Section Overrides */
     .collage-grid {
-        display: flex;
-        flex-direction: column;
+        /*display: flex;
+        flex-direction: column;*/
         gap: 20px;
         height: auto;
-        max-height: none;
-        width: 90%;
+       /* max-height: none;
+        width: 90%;*/
     }
     .collage-card {
         position: relative; /* Stack cards vertically in linear flow */
@@ -4139,9 +4139,48 @@ body.menu-open .header-menu-btn.active .menu-line {
     .space-card-title {
         font-size: 2.1rem;
     }
+
+    .footer-links1{
+        flex-wrap: wrap;
+    }
+    .footer-links1 a {
+    margin: 0 14px;
+}
 }
 
 @media (max-width: 768px) {
+    .concierge-subheading br{
+        display: none;
+    }
+    .footer-grid1 .col-4:nth-child(2){
+        display: none;
+    }
+        .footer-grid1 .col-4:last-child {
+        margin-top: 20px;
+    }
+  .footer-grid1  .col-4 {
+    width: 100%;
+    text-align: center;
+}
+    .footer-grid1 .d-flex{
+        flex-wrap: wrap;
+    }
+        .footer-links1 a {
+        margin-bottom: 10px;
+    }
+    .footer-links1 {
+    margin-bottom: 20px;
+}
+    .footer-grid1 {
+    width: 100%;
+    padding: 4px 0px;
+}
+        .collage-overlay-container {
+        height: auto;
+        margin-top: 60px;
+        align-items: flex-start;
+        overflow-y: auto;
+    }
     .office-spaces-section {
         padding: 70px 24px;
     }
