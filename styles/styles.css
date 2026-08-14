@@ -18,7 +18,12 @@
     margin: 0;
     padding: 0;
 }
-
+#video-canvas {
+    background-image: url('../assets/sequences/main/frame_000001.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);

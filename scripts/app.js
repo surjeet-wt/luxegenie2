@@ -4,38 +4,66 @@ gsap.registerPlugin(ScrollTrigger);
 // Build virtual frame list array
 const frameMetadata = [];
 
-// 1a. Standard sequence frames 0 to 102 (Info section) - Use only frame_000082 with fade in
-for (let i = 0; i <= 102; i++) {
+// ==========================================
+// 1a. MAIN SEQUENCE
+// frame_000001.jpg se start hoga
+// ==========================================
+for (let i = 1; i <= 102; i++) {
+
     let opacity = 1.0;
-    if (i < 25) {
-        opacity = i / 25; // Fade in over first 25 frames
+
+    // First frame completely visible
+    if (i === 1) {
+        opacity = 1.0;
     }
+
+    // Optional fade-in after first frame
+    else if (i <= 25) {
+        opacity = (i - 1) / 24;
+    }
+
     frameMetadata.push({
         type: 'standard',
-        path: 'assets/sequences/main/frame_000082.jpg',
+        path: `assets/sequences/main/frame_${String(i).padStart(6, '0')}.jpg`,
         actualIndex: i,
         opacity: opacity
     });
 }
 
-// 1b. Render Video section pause (retains frame 82 for 150 virtual frames) - hidden
+
+// ==========================================
+// 1b. RENDER VIDEO PAUSE
+// frame 82 ko visible rakho
+// ==========================================
 for (let i = 0; i < 150; i++) {
+
     frameMetadata.push({
         type: 'render-video-pause',
         path: 'assets/sequences/main/frame_000082.jpg',
         actualIndex: 82,
-        opacity: 0.0
+        opacity: 1.0
     });
 }
 
-// 1c. Features (Vision & Mission) section pause (retains frame 82 for 150 virtual frames) - fades in/out
+
+// ==========================================
+// 1c. FEATURES PAUSE
+// frame 82 visible rahega
+// ==========================================
 for (let i = 0; i < 150; i++) {
+
     let opacity = 1.0;
+
+    // Fade in
     if (i < 25) {
-        opacity = i / 25; // Fade in over first 25 virtual frames
-    } else if (i > 125) {
-        opacity = (150 - i) / 25; // Fade out over last 25 virtual frames
+        opacity = i / 24;
     }
+
+    // Fade out
+    else if (i >= 125) {
+        opacity = (149 - i) / 24;
+    }
+
     frameMetadata.push({
         type: 'features-pause',
         path: 'assets/sequences/main/frame_000082.jpg',
@@ -43,7 +71,6 @@ for (let i = 0; i < 150; i++) {
         opacity: opacity
     });
 }
-
 // 1f. Intelligent, Served section using static asset image (frames 634 to 789)
 for (let i = 634; i <= 789; i++) {
     frameMetadata.push({
