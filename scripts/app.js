@@ -942,10 +942,11 @@ function setupVoicesCardInteractions() {
 
         wrapper.addEventListener('click', (e) => {
             e.preventDefault();
-            
+
             if (card.classList.contains('playing')) {
                 card.classList.remove('playing');
                 video.pause();
+                video.removeAttribute('controls'); // ✅ Pause hone par controls hatao
             } else {
                 // Pause all other playing videos first
                 cards.forEach(otherCard => {
@@ -954,12 +955,15 @@ function setupVoicesCardInteractions() {
                         const otherVideo = otherCard.querySelector('.voices-video');
                         if (otherVideo) {
                             otherVideo.pause();
+                            otherVideo.removeAttribute('controls'); // ✅ Doosre videos ke bhi controls hatao
                         }
                     }
                 });
 
                 card.classList.add('playing');
                 video.muted = false;
+                video.setAttribute('controls', 'controls'); // ✅ Play karte waqt controls dikhao
+
                 const playPromise = video.play();
                 if (playPromise !== undefined) {
                     playPromise.catch(() => {
@@ -970,8 +974,19 @@ function setupVoicesCardInteractions() {
                 }
             }
         });
-    });
 
+        // ✅ Agar user video ke apne built-in "pause" button se pause kare (controls dikhne ke baad),
+        // to bhi card ki 'playing' class aur controls sahi se sync rahe
+        video.addEventListener('pause', () => {
+            card.classList.remove('playing');
+            video.removeAttribute('controls');
+        });
+
+        video.addEventListener('ended', () => {
+            card.classList.remove('playing');
+            video.removeAttribute('controls');
+        });
+    });
 }
 
 // Virtual Frame Mapping & 2x2 Collage Section Overlay Controller

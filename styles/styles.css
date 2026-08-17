@@ -4062,7 +4062,9 @@ body.menu-open .header-menu-btn.active .menu-line {
 .prev-btn:hover svg {
     transform: translateX(-3px);
 }
-
+.text-center{
+    text-align: center;
+}
 .next-btn {
     right: 2vw;
 }
@@ -4096,6 +4098,9 @@ body.menu-open .header-menu-btn.active .menu-line {
     box-shadow: 0 0 10px rgba(223, 186, 107, 0.5);
 }
 
+.social{
+    margin-bottom: 10px;
+}
 .social a {
      margin: 0 10px;
 }
@@ -4105,6 +4110,8 @@ body.menu-open .header-menu-btn.active .menu-line {
 .footer-grid1 {
     width: 100%;
     padding: 4px 50px;
+    position: absolute;
+    bottom: 40px;
 }
 .footer-links1{
     display: flex;
