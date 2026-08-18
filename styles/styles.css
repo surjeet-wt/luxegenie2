@@ -544,6 +544,7 @@ body.loaded .scroll-indicator-wrapper {
 }
 
 @media (max-width: 768px) {
+
     .skip-center-parent {
         bottom: 45px;
     }
@@ -1573,6 +1574,12 @@ body.loaded .skip-indicator-wrapper {
 }
 
 @media (max-width: 768px) {
+    .features-main-heading span{
+        font-size: 1.35rem !important;
+    }
+    .footer-grid1 {
+        position: initial !important;
+    }
     .footer-overlay-container {
         padding: 60px 0 40px 0;
         height: auto;
