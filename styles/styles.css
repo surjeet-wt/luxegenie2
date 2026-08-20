@@ -12,7 +12,22 @@
     --font-mono: 'Space Grotesk', monospace;
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
+@font-face {
+    font-family: 'ChronicleDisplay-Roman';
+    src: url('../fonts/ChronicleDisplay-Roman.eot');
+    src: url('../fonts/ChronicleDisplay-Roman.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ChronicleDisplay-Roman.woff2') format('woff2'),
+        url('../fonts/ChronicleDisplay-Roman.woff') format('woff'),
+        url('../fonts/ChronicleDisplay-Roman.ttf') format('truetype'),
+        url('../fonts/ChronicleDisplay-Roman.svg#ChronicleDisplay-Roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
+.font{
+     font-family:'ChronicleDisplay-Roman' !important;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -1841,7 +1856,7 @@ body.loaded .skip-indicator-wrapper {
     object-fit: cover;
     display: block;
     position: absolute;
-    right: -27%;
+    right: -18%;
     top: 0;
 }
 
