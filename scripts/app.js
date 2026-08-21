@@ -625,6 +625,25 @@ function updateRenderVideoVisibility(virtualFrame) {
             if (!isRenderVideoVisible) {
                 isRenderVideoVisible = true;
                 renderVideoOverlay.classList.add('visible');
+
+                // ✅ Video ko autoplay + audio ke saath chalu karo
+                renderVideo.muted = false;
+                renderVideo.currentTime = 0;
+                const playPromise = renderVideo.play();
+
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {
+                        // Agar browser autoplay-with-sound block kare,
+                        // to muted me hi play kar do taaki video ruke na
+                        renderVideo.muted = true;
+                        renderVideo.play().catch(() => {});
+                    });
+                }
+
+                const wrapper = document.querySelector('.render-video-wrapper');
+                if (wrapper) {
+                    wrapper.classList.add('playing');
+                }
             }
         } else {
             if (isRenderVideoVisible) {
@@ -1266,31 +1285,64 @@ document.querySelectorAll('.skip-btn').forEach(btn => {
 });
 
 
+const renderVideoAudioBtn = document.getElementById('render-video-audio-btn');
 
-// Render Video Click-to-Play Setup
-function setupRenderVideoInteractions() {
-    const wrapper = document.querySelector('.render-video-wrapper');
-    const video = document.getElementById('render-video');
-    if (!wrapper || !video) return;
+if (renderVideoAudioBtn && renderVideo) {
 
-    wrapper.addEventListener('click', (e) => {
+    // Default: audio OFF
+    renderVideo.muted = true;
+    renderVideo.volume = 0;
+
+    renderVideoAudioBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        if (video.paused) {
-            video.muted = false; // Unmute on user interaction
-            video.play()
-                .then(() => {
-                    wrapper.classList.add('playing');
-                })
-                .catch(err => console.log('Video play error:', err));
+        e.stopPropagation();
+
+        if (renderVideo.muted) {
+
+            // AUDIO ON
+            renderVideo.muted = false;
+            renderVideo.volume = 1;
+
+            renderVideoAudioBtn.classList.add('audio-on');
+            renderVideoAudioBtn.setAttribute('aria-label', 'Turn audio off');
+
         } else {
-            video.pause();
-            wrapper.classList.remove('playing');
+
+            // AUDIO OFF
+            renderVideo.muted = true;
+            renderVideo.volume = 0;
+
+            renderVideoAudioBtn.classList.remove('audio-on');
+            renderVideoAudioBtn.setAttribute('aria-label', 'Turn audio on');
         }
     });
 }
 
-// Initialize Render Video Interactions
-setupRenderVideoInteractions();
+
+// Render Video Click-to-Play Setup
+// function setupRenderVideoInteractions() {
+//     const wrapper = document.querySelector('.render-video-wrapper');
+//     const video = document.getElementById('render-video');
+//     if (!wrapper || !video) return;
+
+//     wrapper.addEventListener('click', (e) => {
+//         e.preventDefault();
+//         if (video.paused) {
+//             video.muted = false; // Unmute on user interaction
+//             video.play()
+//                 .then(() => {
+//                     wrapper.classList.add('playing');
+//                 })
+//                 .catch(err => console.log('Video play error:', err));
+//         } else {
+//             video.pause();
+//             wrapper.classList.remove('playing');
+//         }
+//     });
+// }
+
+// // Initialize Render Video Interactions
+// setupRenderVideoInteractions();
 
 // Initialize Voices Card Interactions
 setupVoicesCardInteractions();

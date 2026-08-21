@@ -82,23 +82,56 @@
     <!-- Info Section Overlay -->
     <div id="info-overlay" class="info-overlay-container visible">
         <div class="floating-wrapper">
-            <h2 class="info-heading font">The World's First <br>INTELLIGENT TABLE CONCIERGE</h2>
+            <h2 class="info-heading font">THE WORLD'S FIRST <br>INTELLIGENT TABLE CONCIERGE</h2>
         </div>
     </div>
 
     <!-- Render Video Fullscreen Overlay -->
     <div id="render-video-overlay" class="render-video-overlay-container">
-        <div class="render-video-wrapper playing">
-            <video id="render-video" class="render-video-element" playsinline autoplay muted loop  poster=""> <!-- assets/images/rr.png-->
-                <source src="assets/video/Video_home2.mp4" type="video/mp4">
-            </video>
-            <!-- <div class="video-play-badge">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z"/>
-                </svg>
-            </div>  -->
+
+    <div class="render-video-wrapper">
+
+        <video
+            id="render-video"
+            class="render-video-element"
+            playsinline
+            preload="auto"
+            loop
+            poster=""
+        >
+            <source src="assets/video/Video_home2.mp4" type="video/mp4">
+        </video>
+
+        <!-- Video Controls -->
+        <div class="render-video-controls">
+
+            <!-- Play / Pause -->
+            <!-- <button
+                type="button"
+                id="render-video-play-btn"
+                class="render-video-control-btn"
+                aria-label="Play video"
+            >
+                <span class="play-icon">▶</span>
+                <span class="pause-icon">❚❚</span>
+            </button>
+ -->
+            <!-- Audio On / Off -->
+            <button
+                type="button"
+                id="render-video-audio-btn"
+                class="render-video-control-btn"
+                aria-label="Turn audio on"
+            >
+                <span class="audio-on-icon">🔊</span>
+                <span class="audio-off-icon">🔇</span>
+            </button>
+
         </div>
+
     </div>
+
+</div>
     <!-- Features Section Overlay -->
     <div id="features-overlay" class="features-overlay-container">
         <div class="features-content">
@@ -109,8 +142,8 @@
             </div>
             <div class="features-right">
                 <h2 class="features-main-heading font text-left features-main-heading2">
-                    <span style="white-space: nowrap;">CALL    </span>
-                    <span style="white-space: nowrap;">FOR</span>
+                    <span style="white-space: nowrap;    font-size: 60px;" >A CALL   FOR </span><br>
+                    <!-- <span style="white-space: nowrap;"></span> -->
                     <span style="white-space: nowrap;">ATTENTION</span></h2>
             </div>
         </div>
