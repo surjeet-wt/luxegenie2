@@ -663,7 +663,7 @@ body.loaded .skip-indicator-wrapper {
 
 .info-heading {
     font-family: 'Raleway', sans-serif;
-    font-size: 1.55rem; /* Increased by 1px */
+    font-size: 1.2rem; /* Increased by 1px */
     font-weight: 400;
     line-height: 1.25;
     color: var(--accent-color);
